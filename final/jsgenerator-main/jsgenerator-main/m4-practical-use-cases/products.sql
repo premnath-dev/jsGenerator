@@ -1,0 +1,78 @@
+-- Create the `generatorcourse` database
+CREATE DATABASE IF NOT EXISTS generatorcourse;
+
+-- Select the `generatorcourse` database to use
+USE generatorcourse;
+
+-- Create the `products` table
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    price DECIMAL(10, 2) NOT NULL,
+    stock_quantity INT DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert sample data into the `products` table
+INSERT INTO products (name, description, price, stock_quantity) VALUES 
+('Laptop', 'High-performance laptop suitable for gaming and professional work', 1200.00, 35),
+('Smartphone', 'Latest model smartphone with high-resolution camera', 800.00, 50),
+('Wireless Headphones', 'Noise-cancelling wireless headphones with long-lasting battery', 150.00, 75),
+('Smart Watch', 'Water-resistant smartwatch with health and fitness tracking', 200.00, 40),
+('Bluetooth Speaker', 'Portable Bluetooth speaker with excellent sound quality', 99.99, 60),
+('External Hard Drive', '1TB external hard drive with fast data transfer', 80.00, 90),
+('Tablet', 'Lightweight tablet with a 10-inch screen', 450.00, 50),
+('Gaming Console', 'Next-generation gaming console with 4K resolution support', 500.00, 30),
+('E-Reader', 'E-reader with a glare-free display, perfect for reading', 130.00, 65),
+('Webcam', 'HD webcam for streaming and video conferencing', 70.00, 100),
+('Laptop Pro', 'Advanced laptop for professional work and high-end gaming', 1400.00, 30),
+('Laptop Air', 'Lightweight and efficient laptop for everyday use', 1100.00, 45),
+('Smartphone Plus', 'High-end smartphone with superior camera capabilities', 900.00, 40),
+('Smartphone Mini', 'Compact size smartphone with all essential features', 700.00, 55),
+('Earbuds', 'Compact wireless earbuds with excellent sound quality', 120.00, 80),
+('Sports Headphones', 'Durable headphones designed for sports and fitness', 130.00, 70),
+('Smart Watch Pro', 'Advanced smartwatch with extensive health tracking', 250.00, 35),
+('Fitness Tracker', 'Wearable fitness tracker with heart rate monitor', 60.00, 90),
+('Bluetooth Speaker Mini', 'Compact and portable Bluetooth speaker', 75.00, 70),
+('Bluetooth Speaker Pro', 'High-end Bluetooth speaker with surround sound', 150.00, 55),
+('External SSD', '512GB external SSD with ultra-fast transfer speed', 100.00, 85),
+('4TB External Hard Drive', '4TB external hard drive for extensive storage needs', 150.00, 75),
+('Gaming Laptop', 'High-performance gaming laptop with top-tier graphics', 1800.00, 25),
+('Ultra HD Monitor', '4K Ultra HD monitor for gaming and professional use', 350.00, 40),
+('Wireless Mouse', 'Ergonomic wireless mouse with customizable buttons', 50.00, 100),
+('Wireless Keyboard', 'Slim wireless keyboard with long battery life', 70.00, 80),
+('Tablet Pro', 'High-performance tablet with superior display quality', 600.00, 45),
+('Mini Tablet', 'Compact and lightweight tablet for on-the-go use', 300.00, 60),
+('VR Headset', 'Immersive virtual reality headset for gaming', 350.00, 50),
+('Gaming Console Pro', 'Advanced gaming console with enhanced performance', 550.00, 25),
+('Digital Camera', 'High-resolution digital camera for professional photography', 800.00, 30),
+('Action Camera', 'Compact action camera for outdoor and sports recording', 200.00, 70),
+('Smart Thermostat', 'Energy-efficient smart thermostat with remote control', 180.00, 85),
+('Smart Light Bulb', 'Wi-Fi enabled smart light bulb with color changing features', 20.00, 100),
+('Robot Vacuum', 'Automated robot vacuum cleaner with smart navigation', 250.00, 40),
+('Air Purifier', 'Efficient air purifier with smart controls', 150.00, 60),
+('Electric Kettle', 'Fast-boiling electric kettle with temperature control', 45.00, 80),
+('Smart Lock', 'Secure smart lock with remote access features', 130.00, 50),
+('Video Doorbell', 'Wi-Fi enabled video doorbell with two-way audio', 100.00, 70),
+('Smart Plug', 'Voice-controlled smart plug compatible with smart homes', 25.00, 100),
+('3D Printer', 'Consumer-grade 3D printer for home use', 400.00, 35),
+('Drone', 'Quadcopter drone with HD camera for aerial photography', 300.00, 40),
+('Gaming Chair', 'Ergonomic gaming chair with adjustable features', 200.00, 30),
+('Mechanical Keyboard', 'High-performance mechanical keyboard for gaming', 90.00, 75),
+('Graphic Tablet', 'Digital graphic tablet for artists and designers', 100.00, 65),
+('E-Book Reader Plus', 'Advanced e-reader with backlight and waterproof design', 160.00, 60),
+('Streaming Microphone', 'Professional-grade microphone for streaming and podcasting', 100.00, 50),
+('Portable Projector', 'Compact portable projector for movies and presentations', 250.00, 40),
+('Smart Home Hub', 'Central smart home hub for device integration', 120.00, 55),
+('Wireless Charging Pad', 'Fast wireless charging pad for multiple devices', 40.00, 80),
+('Fitness Smart Band', 'Waterproof smart band with fitness and sleep tracking', 50.00, 85),
+('Noise Cancelling Earbuds', 'High-quality noise cancelling earbuds for travel and work', 140.00, 70),
+('Smart Body Scale', 'Wi-Fi enabled body scale with health metrics', 60.00, 75),
+('Portable SSD 2TB', '2TB portable SSD for high-speed data storage and transfer', 250.00, 50),
+('Studio Headphones', 'Professional studio headphones for music production', 180.00, 40),
+('Racing Drone', 'High-speed racing drone for competitive sports', 350.00, 30),
+('Smart Glasses', 'Augmented reality smart glasses with interactive features', 500.00, 35),
+('Wireless Game Controller', 'Ergonomic wireless controller for console and PC gaming', 70.00, 65),
+('Mobile Gaming Controller', 'Attachable controller for enhanced mobile gaming', 55.00, 80),
+('Smart Coffee Maker', 'Wi-Fi enabled coffee maker with scheduling features', 100.00, 60);
